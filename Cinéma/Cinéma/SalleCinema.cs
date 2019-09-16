@@ -33,6 +33,10 @@ namespace Cinéma
         public int NombrePlaceNormal { get => nombrePlaceNormal; set => nombrePlaceNormal = value; }
         public int NombrePlaceReduit { get => nombrePlaceReduit; set => nombrePlaceReduit = value; }
 
-       
+        public int nbPlacesDisponibles()
+        {
+            return (this.nombrePlace - this.nombrePlaceNormal - this.nombrePlaceReduit);
+        }
+
     }
 }
