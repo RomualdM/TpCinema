@@ -17,7 +17,7 @@ namespace Cinéma
 
 
 
-        public SalleCinema(string TitreFilm, int NombrePlace, float PrixPlace, int NombrePlaceNormal, int NombrePlaceReduit, string titreFilm = null, int nombrePlace = 0, float prixPlace = 0, int nombrePlaceNormal = 0, int nombrePlaceReduit = 0)
+        public SalleCinema(string TitreFilm, int NombrePlace, double PrixPlace, int NombrePlaceNormal, int NombrePlaceReduit, string titreFilm = null, int nombrePlace = 0, float prixPlace = 0, int nombrePlaceNormal = 0, int nombrePlaceReduit = 0)
         {
 
             this.TitreFilm = titreFilm;
