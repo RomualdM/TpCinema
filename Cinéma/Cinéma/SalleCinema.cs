@@ -45,7 +45,7 @@ namespace Cinéma
                 {
                     this.nombrePlace = (this.nombrePlace - nbre);
                     this.NombrePlaceReduit += nbre;
-                    label1.text = nbre + " places vendues " + (nbre * (this.PrixPlace * 0.2)) + " €";
+                    label1.text = nbre + " places vendues " + (nbre * (this.PrixPlace * 0.8)) + " €";
                 }
                 else
                 {
@@ -64,6 +64,11 @@ namespace Cinéma
         {
             this.NombrePlaceNormal = 0;
             this.NombrePlaceReduit = 0;
+        }
+        public double chiffreAffaires()
+        {
+            return (this.NombrePlaceReduit * (this.PrixPlace * 0.8)) + (this.NombrePlaceNormal * this.PrixPlace);
+
         }
     }
 }
