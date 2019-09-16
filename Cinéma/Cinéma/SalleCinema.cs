@@ -60,5 +60,10 @@ namespace Cinéma
             }
 
         }
+        public void remiseAZero()
+        {
+            this.NombrePlaceNormal = 0;
+            this.NombrePlaceReduit = 0;
+        }
     }
 }
