@@ -15,11 +15,11 @@ namespace Cinéma
         private int nombrePlaceNormal;
         private int nombrePlaceReduit;
 
-        
+
 
         public SalleCinema(string TitreFilm, int NombrePlace, float PrixPlace, int NombrePlaceNormal, int NombrePlaceReduit, string titreFilm = null, int nombrePlace = 0, float prixPlace = 0, int nombrePlaceNormal = 0, int nombrePlaceReduit = 0)
         {
-           
+
             this.TitreFilm = titreFilm;
             this.NombrePlace = nombrePlace;
             this.PrixPlace = prixPlace;
@@ -37,6 +37,28 @@ namespace Cinéma
         {
             return (this.nombrePlace - this.nombrePlaceNormal - this.nombrePlaceReduit);
         }
+        public void vendrePlaces(int nbre, bool tarifReduit)
+        {
+            if (nbre <= this.nbPlacesDisponibles())
+            {
+                if (tarifReduit == true)
+                {
+                    this.nombrePlace = (this.nombrePlace - nbre);
+                    this.NombrePlaceReduit += nbre;
+                    label1.text = nbre + " places vendues " + (nbre * (this.PrixPlace * 0.2)) + " €";
+                }
+                else
+                {
+                    this.nombrePlace = (this.nombrePlace - nbre);
+                    this.NombrePlaceNormal += nbre;
+                    label1.text = nbre + " places vendues " + (nbre * this.PrixPlace) + " €";
+                }
+            }
+            else
+            {
+                label1.text = "vente impossible";
+            }
 
+        }
     }
 }
